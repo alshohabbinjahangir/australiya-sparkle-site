@@ -100,7 +100,7 @@ function Index() {
       <section id="top" className="relative min-h-[100svh] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://picsum.photos/seed/cleanhero/1920/1200')" }}
+          style={{ backgroundImage: `url(${heroImg})` }}
         />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute inset-0 bg-gradient-mesh" />
