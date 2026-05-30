@@ -74,14 +74,14 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* NAVBAR */}
       <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? "glass shadow-soft" : "bg-transparent"}`}>
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <a href="#top" className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-teal text-navy-deep">
-              <Sparkles className="h-5 w-5" strokeWidth={2.5} />
+        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 py-3 sm:py-4">
+          <a href="#top" className="flex items-center gap-2 min-w-0">
+            <span className="flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-full bg-teal text-navy-deep">
+              <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" strokeWidth={2.5} />
             </span>
-            <span className="font-serif text-xl text-navy">Australiya Cleaning</span>
+            <span className="font-serif text-base sm:text-xl text-navy truncate">Australiya Cleaning</span>
           </a>
-          <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-navy/80">
+          <ul className="hidden lg:flex items-center gap-8 text-sm font-medium text-navy/80">
             <li><a href="#services" className="hover:text-teal transition-colors">Services</a></li>
             <li><a href="#before-after" className="hover:text-teal transition-colors">Before &amp; After</a></li>
             <li><a href="#why" className="hover:text-teal transition-colors">Why Us</a></li>
@@ -89,9 +89,10 @@ function Index() {
           </ul>
           <a
             href="#contact"
-            className="inline-flex items-center gap-1.5 rounded-full bg-teal px-5 py-2.5 text-sm font-semibold text-navy-deep shadow-teal hover:scale-[1.03] transition-transform"
+            className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-teal px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-navy-deep shadow-teal hover:scale-[1.03] transition-transform whitespace-nowrap"
           >
-            Get a Free Quote
+            <span className="hidden sm:inline">Get a Free Quote</span>
+            <span className="sm:hidden">Free Quote</span>
           </a>
         </nav>
       </header>
@@ -104,39 +105,39 @@ function Index() {
         />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute inset-0 bg-gradient-mesh" />
-        <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 w-full">
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-6 pt-28 sm:pt-32 pb-44 sm:pb-24 w-full">
           <div className="max-w-3xl text-white">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-medium tracking-widest uppercase backdrop-blur">
-              <Sparkles className="h-3.5 w-3.5 text-teal" /> Australia's premium clean
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 sm:px-4 py-1.5 text-[10px] sm:text-xs font-medium tracking-widest uppercase backdrop-blur">
+              <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-teal" /> Australia's premium clean
             </span>
-            <h1 className="mt-6 font-serif text-5xl md:text-7xl leading-[1.05]">
+            <h1 className="mt-5 sm:mt-6 font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05]">
               Your Space,<br />
               <span className="text-teal">Spotlessly</span> Transformed.
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-white/80">
+            <p className="mt-5 sm:mt-6 max-w-xl text-base sm:text-lg text-white/80">
               Professional cleaning services trusted across Australia. Hotel-grade attention to detail, delivered by a team that treats your home like ours.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-teal px-7 py-3.5 text-sm font-semibold text-navy-deep shadow-teal hover:scale-[1.03] transition-transform">
+            <div className="mt-7 sm:mt-8 flex flex-wrap gap-3">
+              <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-teal px-6 sm:px-7 py-3 sm:py-3.5 text-sm font-semibold text-navy-deep shadow-teal hover:scale-[1.03] transition-transform">
                 Book Now <ArrowRight className="h-4 w-4" />
               </a>
-              <a href="#before-after" className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors">
+              <a href="#before-after" className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 sm:px-7 py-3 sm:py-3.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors">
                 See Our Work
               </a>
             </div>
           </div>
 
           {/* Floating trust badge */}
-          <div className="absolute right-6 bottom-12 md:right-12 md:bottom-20 animate-float">
-            <div className="glass rounded-2xl px-5 py-4 shadow-lift flex items-center gap-3">
+          <div className="absolute left-5 right-5 bottom-8 sm:left-auto sm:right-12 sm:bottom-20 animate-float flex justify-center sm:block">
+            <div className="glass rounded-2xl px-4 sm:px-5 py-3 sm:py-4 shadow-lift flex items-center gap-3">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-teal text-teal" />
+                  <Star key={i} className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-teal text-teal" />
                 ))}
               </div>
               <div>
-                <p className="text-sm font-semibold text-navy">4.9 / 5 Rating</p>
-                <p className="text-xs text-muted-foreground">500+ Happy Clients</p>
+                <p className="text-xs sm:text-sm font-semibold text-navy">4.9 / 5 Rating</p>
+                <p className="text-[10px] sm:text-xs text-muted-foreground">500+ Happy Clients</p>
               </div>
             </div>
           </div>
@@ -144,21 +145,21 @@ function Index() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="relative py-28 noise-overlay">
-        <div className="mx-auto max-w-7xl px-6">
+      <section id="services" className="relative py-20 sm:py-28 noise-overlay">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="max-w-2xl reveal">
             <span className="text-xs font-semibold tracking-widest uppercase text-teal">What we clean</span>
-            <h2 className="mt-3 font-serif text-4xl md:text-5xl text-navy">Tailored cleans for every surface, every space.</h2>
-            <p className="mt-4 text-muted-foreground">From weekly residential refreshes to commercial deep-cleans, every service is delivered with the same uncompromising standard.</p>
+            <h2 className="mt-3 font-serif text-3xl sm:text-4xl md:text-5xl text-navy">Tailored cleans for every surface, every space.</h2>
+            <p className="mt-4 text-sm sm:text-base text-muted-foreground">From weekly residential refreshes to commercial deep-cleans, every service is delivered with the same uncompromising standard.</p>
           </div>
 
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {services.map(({ Icon, title, desc }, i) => (
-              <div key={title} className="reveal hover-lift bg-card rounded-2xl p-7 shadow-soft border border-border/50" style={{ transitionDelay: `${i * 60}ms` }}>
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-teal/15 text-teal">
-                  <Icon className="h-6 w-6" strokeWidth={2} />
+              <div key={title} className="reveal hover-lift bg-card rounded-2xl p-6 sm:p-7 shadow-soft border border-border/50" style={{ transitionDelay: `${i * 60}ms` }}>
+                <span className="inline-flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-teal/15 text-teal">
+                  <Icon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2} />
                 </span>
-                <h3 className="mt-5 text-xl text-navy">{title}</h3>
+                <h3 className="mt-4 sm:mt-5 text-lg sm:text-xl text-navy">{title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{desc}</p>
               </div>
             ))}
@@ -167,15 +168,15 @@ function Index() {
       </section>
 
       {/* BEFORE & AFTER */}
-      <section id="before-after" className="relative py-28 bg-secondary/40 noise-overlay">
-        <div className="mx-auto max-w-7xl px-6">
+      <section id="before-after" className="relative py-20 sm:py-28 bg-secondary/40 noise-overlay">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="max-w-2xl reveal">
             <span className="text-xs font-semibold tracking-widest uppercase text-teal">Real results</span>
-            <h2 className="mt-3 font-serif text-4xl md:text-5xl text-navy">See the Australiya Difference.</h2>
-            <p className="mt-4 text-muted-foreground">Drag the slider to reveal the transformation. No filters, no staging — just our team's work.</p>
+            <h2 className="mt-3 font-serif text-3xl sm:text-4xl md:text-5xl text-navy">See the Australiya Difference.</h2>
+            <p className="mt-4 text-sm sm:text-base text-muted-foreground">Drag the slider to reveal the transformation. No filters, no staging — just our team's work.</p>
           </div>
 
-          <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="mt-10 sm:mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {beforeAfters.map((b, i) => (
               <div key={b.label} className="reveal" style={{ transitionDelay: `${i * 100}ms` }}>
                 <BeforeAfterSlider {...b} />
@@ -186,20 +187,20 @@ function Index() {
       </section>
 
       {/* WHY US */}
-      <section id="why" className="relative py-24 bg-gradient-cta text-white overflow-hidden">
+      <section id="why" className="relative py-20 sm:py-24 bg-gradient-cta text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-mesh opacity-60" />
-        <div className="relative mx-auto max-w-7xl px-6">
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-6">
           <div className="max-w-2xl reveal">
             <span className="text-xs font-semibold tracking-widest uppercase text-teal">Why Australiya</span>
-            <h2 className="mt-3 font-serif text-4xl md:text-5xl">The cleaning team Australians actually recommend.</h2>
+            <h2 className="mt-3 font-serif text-3xl sm:text-4xl md:text-5xl">The cleaning team Australians actually recommend.</h2>
           </div>
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
             {stats.map(({ Icon, title, desc }, i) => (
-              <div key={title} className="reveal rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6" style={{ transitionDelay: `${i * 80}ms` }}>
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-teal text-navy-deep">
-                  <Icon className="h-6 w-6" strokeWidth={2} />
+              <div key={title} className="reveal rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-5 sm:p-6" style={{ transitionDelay: `${i * 80}ms` }}>
+                <span className="inline-flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-teal text-navy-deep">
+                  <Icon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2} />
                 </span>
-                <h3 className="mt-5 text-xl">{title}</h3>
+                <h3 className="mt-4 sm:mt-5 text-lg sm:text-xl">{title}</h3>
                 <p className="mt-2 text-sm text-white/70 leading-relaxed">{desc}</p>
               </div>
             ))}
@@ -208,21 +209,21 @@ function Index() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="relative py-28 noise-overlay">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative py-20 sm:py-28 noise-overlay">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="max-w-2xl reveal">
             <span className="text-xs font-semibold tracking-widest uppercase text-teal">Kind words</span>
-            <h2 className="mt-3 font-serif text-4xl md:text-5xl text-navy">Loved by hundreds of Australian homes.</h2>
+            <h2 className="mt-3 font-serif text-3xl sm:text-4xl md:text-5xl text-navy">Loved by hundreds of Australian homes.</h2>
           </div>
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
+          <div className="mt-10 sm:mt-14 grid md:grid-cols-3 gap-5 sm:gap-6">
             {testimonials.map((t, i) => (
-              <figure key={t.name} className="reveal hover-lift relative bg-card rounded-2xl p-8 shadow-soft border border-border/50" style={{ transitionDelay: `${i * 80}ms` }}>
-                <Quote className="absolute top-6 right-6 h-10 w-10 text-teal/20" />
+              <figure key={t.name} className="reveal hover-lift relative bg-card rounded-2xl p-6 sm:p-8 shadow-soft border border-border/50" style={{ transitionDelay: `${i * 80}ms` }}>
+                <Quote className="absolute top-5 right-5 sm:top-6 sm:right-6 h-9 w-9 sm:h-10 sm:w-10 text-teal/20" />
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, k) => <Star key={k} className="h-4 w-4 fill-teal text-teal" />)}
                 </div>
-                <blockquote className="mt-4 text-navy text-lg leading-relaxed">"{t.quote}"</blockquote>
-                <figcaption className="mt-6">
+                <blockquote className="mt-4 text-navy text-base sm:text-lg leading-relaxed">"{t.quote}"</blockquote>
+                <figcaption className="mt-5 sm:mt-6">
                   <p className="font-semibold text-navy">{t.name}</p>
                   <p className="text-sm text-muted-foreground">{t.role}</p>
                 </figcaption>
@@ -233,22 +234,22 @@ function Index() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="relative py-28 bg-navy-deep text-white overflow-hidden">
+      <section id="contact" className="relative py-20 sm:py-28 bg-navy-deep text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-mesh opacity-50" />
-        <div className="relative mx-auto max-w-6xl px-6 grid lg:grid-cols-2 gap-16">
+        <div className="relative mx-auto max-w-6xl px-5 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-16">
           <div className="reveal">
             <span className="text-xs font-semibold tracking-widest uppercase text-teal">Get in touch</span>
-            <h2 className="mt-3 font-serif text-4xl md:text-6xl leading-tight">Ready for a Cleaner Space?</h2>
-            <p className="mt-5 text-white/70 max-w-md">Tell us about your space and we'll come back within the hour with a transparent quote. No call centres, no upsells.</p>
-            <a href="tel:18002532628" className="mt-8 inline-flex items-center gap-3 text-teal hover:text-teal-glow transition-colors">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-teal/15">
+            <h2 className="mt-3 font-serif text-3xl sm:text-4xl md:text-6xl leading-tight">Ready for a Cleaner Space?</h2>
+            <p className="mt-4 sm:mt-5 text-sm sm:text-base text-white/70 max-w-md">Tell us about your space and we'll come back within the hour with a transparent quote. No call centres, no upsells.</p>
+            <a href="tel:18002532628" className="mt-7 sm:mt-8 inline-flex items-center gap-3 text-teal hover:text-teal-glow transition-colors">
+              <span className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-teal/15">
                 <Phone className="h-5 w-5" />
               </span>
-              <span className="font-serif text-3xl md:text-4xl">1800-CLEAN-AU</span>
+              <span className="font-serif text-2xl sm:text-3xl md:text-4xl">1800-CLEAN-AU</span>
             </a>
           </div>
 
-          <form onSubmit={(e) => { e.preventDefault(); alert("Thanks! We'll be in touch within the hour."); }} className="reveal space-y-4 bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-8">
+          <form onSubmit={(e) => { e.preventDefault(); alert("Thanks! We'll be in touch within the hour."); }} className="reveal space-y-4 bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-6 sm:p-8">
             <div>
               <label className="text-xs uppercase tracking-widest text-white/60">Name</label>
               <input required type="text" className="mt-1 w-full bg-transparent border-b border-white/20 py-3 focus:outline-none focus:border-teal text-white placeholder:text-white/40" placeholder="Jane Doe" />
@@ -270,7 +271,7 @@ function Index() {
 
       {/* FOOTER */}
       <footer className="bg-navy-deep border-t border-white/10 text-white/70">
-        <div className="mx-auto max-w-7xl px-6 py-14 grid md:grid-cols-3 gap-10">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 py-12 sm:py-14 grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
           <div>
             <div className="flex items-center gap-2">
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-teal text-navy-deep">
