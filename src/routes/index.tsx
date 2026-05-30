@@ -139,6 +139,7 @@ function Index() {
                 <p className="text-xs sm:text-sm font-semibold text-navy">4.9 / 5 Rating</p>
                 <p className="text-[10px] sm:text-xs text-muted-foreground">500+ Happy Clients</p>
               </div>
+            </div>
           </div>
         </div>
       </section>
