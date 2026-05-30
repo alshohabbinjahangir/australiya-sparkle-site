@@ -6,6 +6,13 @@ import {
 } from "lucide-react";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { useReveal } from "@/hooks/use-reveal";
+import heroImg from "@/assets/hero-clean.jpg";
+import kitchenBefore from "@/assets/kitchen-before.jpg";
+import kitchenAfter from "@/assets/kitchen-after.jpg";
+import bathroomBefore from "@/assets/bathroom-before.jpg";
+import bathroomAfter from "@/assets/bathroom-after.jpg";
+import carpetBefore from "@/assets/carpet-before.jpg";
+import carpetAfter from "@/assets/carpet-after.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -47,9 +54,9 @@ const testimonials = [
 ];
 
 const beforeAfters = [
-  { label: "Kitchen Restoration", before: "https://picsum.photos/seed/kitchen-before/900/700", after: "https://picsum.photos/seed/kitchen-after/900/700" },
-  { label: "Bathroom Deep Clean", before: "https://picsum.photos/seed/bathroom-before/900/700", after: "https://picsum.photos/seed/bathroom-after/900/700" },
-  { label: "Carpet Revival", before: "https://picsum.photos/seed/carpet-before/900/700", after: "https://picsum.photos/seed/carpet-after/900/700" },
+  { label: "Kitchen Restoration", before: kitchenBefore, after: kitchenAfter },
+  { label: "Bathroom Deep Clean", before: bathroomBefore, after: bathroomAfter },
+  { label: "Carpet Revival", before: carpetBefore, after: carpetAfter },
 ];
 
 function Index() {
