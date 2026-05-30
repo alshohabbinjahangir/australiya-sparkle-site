@@ -48,7 +48,7 @@ export function BeforeAfterSlider({ before, after, label }: Props) {
             src={before}
             alt="Before cleaning"
             className="absolute inset-0 h-full w-full object-cover"
-            style={{ width: `${(100 / pos) * 100}%`, filter: "brightness(0.7) saturate(0.8) sepia(0.15)" }}
+            style={{ width: `${(100 / pos) * 100}%` }}
             draggable={false}
           />
         </div>
