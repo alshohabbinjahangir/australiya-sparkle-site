@@ -74,14 +74,14 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* NAVBAR */}
       <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? "glass shadow-soft" : "bg-transparent"}`}>
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <a href="#top" className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-teal text-navy-deep">
-              <Sparkles className="h-5 w-5" strokeWidth={2.5} />
+        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 py-3 sm:py-4">
+          <a href="#top" className="flex items-center gap-2 min-w-0">
+            <span className="flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-full bg-teal text-navy-deep">
+              <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" strokeWidth={2.5} />
             </span>
-            <span className="font-serif text-xl text-navy">Australiya Cleaning</span>
+            <span className="font-serif text-base sm:text-xl text-navy truncate">Australiya Cleaning</span>
           </a>
-          <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-navy/80">
+          <ul className="hidden lg:flex items-center gap-8 text-sm font-medium text-navy/80">
             <li><a href="#services" className="hover:text-teal transition-colors">Services</a></li>
             <li><a href="#before-after" className="hover:text-teal transition-colors">Before &amp; After</a></li>
             <li><a href="#why" className="hover:text-teal transition-colors">Why Us</a></li>
@@ -89,9 +89,10 @@ function Index() {
           </ul>
           <a
             href="#contact"
-            className="inline-flex items-center gap-1.5 rounded-full bg-teal px-5 py-2.5 text-sm font-semibold text-navy-deep shadow-teal hover:scale-[1.03] transition-transform"
+            className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-teal px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-navy-deep shadow-teal hover:scale-[1.03] transition-transform whitespace-nowrap"
           >
-            Get a Free Quote
+            <span className="hidden sm:inline">Get a Free Quote</span>
+            <span className="sm:hidden">Free Quote</span>
           </a>
         </nav>
       </header>
@@ -104,41 +105,40 @@ function Index() {
         />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute inset-0 bg-gradient-mesh" />
-        <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 w-full">
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-6 pt-28 sm:pt-32 pb-44 sm:pb-24 w-full">
           <div className="max-w-3xl text-white">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-medium tracking-widest uppercase backdrop-blur">
-              <Sparkles className="h-3.5 w-3.5 text-teal" /> Australia's premium clean
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 sm:px-4 py-1.5 text-[10px] sm:text-xs font-medium tracking-widest uppercase backdrop-blur">
+              <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-teal" /> Australia's premium clean
             </span>
-            <h1 className="mt-6 font-serif text-5xl md:text-7xl leading-[1.05]">
+            <h1 className="mt-5 sm:mt-6 font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05]">
               Your Space,<br />
               <span className="text-teal">Spotlessly</span> Transformed.
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-white/80">
+            <p className="mt-5 sm:mt-6 max-w-xl text-base sm:text-lg text-white/80">
               Professional cleaning services trusted across Australia. Hotel-grade attention to detail, delivered by a team that treats your home like ours.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-teal px-7 py-3.5 text-sm font-semibold text-navy-deep shadow-teal hover:scale-[1.03] transition-transform">
+            <div className="mt-7 sm:mt-8 flex flex-wrap gap-3">
+              <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-teal px-6 sm:px-7 py-3 sm:py-3.5 text-sm font-semibold text-navy-deep shadow-teal hover:scale-[1.03] transition-transform">
                 Book Now <ArrowRight className="h-4 w-4" />
               </a>
-              <a href="#before-after" className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors">
+              <a href="#before-after" className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 sm:px-7 py-3 sm:py-3.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors">
                 See Our Work
               </a>
             </div>
           </div>
 
           {/* Floating trust badge */}
-          <div className="absolute right-6 bottom-12 md:right-12 md:bottom-20 animate-float">
-            <div className="glass rounded-2xl px-5 py-4 shadow-lift flex items-center gap-3">
+          <div className="absolute left-5 right-5 bottom-8 sm:left-auto sm:right-12 sm:bottom-20 animate-float flex justify-center sm:block">
+            <div className="glass rounded-2xl px-4 sm:px-5 py-3 sm:py-4 shadow-lift flex items-center gap-3">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-teal text-teal" />
+                  <Star key={i} className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-teal text-teal" />
                 ))}
               </div>
               <div>
-                <p className="text-sm font-semibold text-navy">4.9 / 5 Rating</p>
-                <p className="text-xs text-muted-foreground">500+ Happy Clients</p>
+                <p className="text-xs sm:text-sm font-semibold text-navy">4.9 / 5 Rating</p>
+                <p className="text-[10px] sm:text-xs text-muted-foreground">500+ Happy Clients</p>
               </div>
-            </div>
           </div>
         </div>
       </section>
