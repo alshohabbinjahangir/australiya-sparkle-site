@@ -271,7 +271,7 @@ function Index() {
 
       {/* FOOTER */}
       <footer className="bg-navy-deep border-t border-white/10 text-white/70">
-        <div className="mx-auto max-w-7xl px-6 py-14 grid md:grid-cols-3 gap-10">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 py-12 sm:py-14 grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
           <div>
             <div className="flex items-center gap-2">
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-teal text-navy-deep">
