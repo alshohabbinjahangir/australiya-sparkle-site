@@ -145,21 +145,21 @@ function Index() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="relative py-28 noise-overlay">
-        <div className="mx-auto max-w-7xl px-6">
+      <section id="services" className="relative py-20 sm:py-28 noise-overlay">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="max-w-2xl reveal">
             <span className="text-xs font-semibold tracking-widest uppercase text-teal">What we clean</span>
-            <h2 className="mt-3 font-serif text-4xl md:text-5xl text-navy">Tailored cleans for every surface, every space.</h2>
-            <p className="mt-4 text-muted-foreground">From weekly residential refreshes to commercial deep-cleans, every service is delivered with the same uncompromising standard.</p>
+            <h2 className="mt-3 font-serif text-3xl sm:text-4xl md:text-5xl text-navy">Tailored cleans for every surface, every space.</h2>
+            <p className="mt-4 text-sm sm:text-base text-muted-foreground">From weekly residential refreshes to commercial deep-cleans, every service is delivered with the same uncompromising standard.</p>
           </div>
 
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {services.map(({ Icon, title, desc }, i) => (
-              <div key={title} className="reveal hover-lift bg-card rounded-2xl p-7 shadow-soft border border-border/50" style={{ transitionDelay: `${i * 60}ms` }}>
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-teal/15 text-teal">
-                  <Icon className="h-6 w-6" strokeWidth={2} />
+              <div key={title} className="reveal hover-lift bg-card rounded-2xl p-6 sm:p-7 shadow-soft border border-border/50" style={{ transitionDelay: `${i * 60}ms` }}>
+                <span className="inline-flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-teal/15 text-teal">
+                  <Icon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2} />
                 </span>
-                <h3 className="mt-5 text-xl text-navy">{title}</h3>
+                <h3 className="mt-4 sm:mt-5 text-lg sm:text-xl text-navy">{title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{desc}</p>
               </div>
             ))}
@@ -168,15 +168,15 @@ function Index() {
       </section>
 
       {/* BEFORE & AFTER */}
-      <section id="before-after" className="relative py-28 bg-secondary/40 noise-overlay">
-        <div className="mx-auto max-w-7xl px-6">
+      <section id="before-after" className="relative py-20 sm:py-28 bg-secondary/40 noise-overlay">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="max-w-2xl reveal">
             <span className="text-xs font-semibold tracking-widest uppercase text-teal">Real results</span>
-            <h2 className="mt-3 font-serif text-4xl md:text-5xl text-navy">See the Australiya Difference.</h2>
-            <p className="mt-4 text-muted-foreground">Drag the slider to reveal the transformation. No filters, no staging — just our team's work.</p>
+            <h2 className="mt-3 font-serif text-3xl sm:text-4xl md:text-5xl text-navy">See the Australiya Difference.</h2>
+            <p className="mt-4 text-sm sm:text-base text-muted-foreground">Drag the slider to reveal the transformation. No filters, no staging — just our team's work.</p>
           </div>
 
-          <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="mt-10 sm:mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {beforeAfters.map((b, i) => (
               <div key={b.label} className="reveal" style={{ transitionDelay: `${i * 100}ms` }}>
                 <BeforeAfterSlider {...b} />
@@ -187,20 +187,20 @@ function Index() {
       </section>
 
       {/* WHY US */}
-      <section id="why" className="relative py-24 bg-gradient-cta text-white overflow-hidden">
+      <section id="why" className="relative py-20 sm:py-24 bg-gradient-cta text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-mesh opacity-60" />
-        <div className="relative mx-auto max-w-7xl px-6">
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-6">
           <div className="max-w-2xl reveal">
             <span className="text-xs font-semibold tracking-widest uppercase text-teal">Why Australiya</span>
-            <h2 className="mt-3 font-serif text-4xl md:text-5xl">The cleaning team Australians actually recommend.</h2>
+            <h2 className="mt-3 font-serif text-3xl sm:text-4xl md:text-5xl">The cleaning team Australians actually recommend.</h2>
           </div>
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
             {stats.map(({ Icon, title, desc }, i) => (
-              <div key={title} className="reveal rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6" style={{ transitionDelay: `${i * 80}ms` }}>
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-teal text-navy-deep">
-                  <Icon className="h-6 w-6" strokeWidth={2} />
+              <div key={title} className="reveal rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-5 sm:p-6" style={{ transitionDelay: `${i * 80}ms` }}>
+                <span className="inline-flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-teal text-navy-deep">
+                  <Icon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2} />
                 </span>
-                <h3 className="mt-5 text-xl">{title}</h3>
+                <h3 className="mt-4 sm:mt-5 text-lg sm:text-xl">{title}</h3>
                 <p className="mt-2 text-sm text-white/70 leading-relaxed">{desc}</p>
               </div>
             ))}
@@ -209,21 +209,21 @@ function Index() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="relative py-28 noise-overlay">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative py-20 sm:py-28 noise-overlay">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="max-w-2xl reveal">
             <span className="text-xs font-semibold tracking-widest uppercase text-teal">Kind words</span>
-            <h2 className="mt-3 font-serif text-4xl md:text-5xl text-navy">Loved by hundreds of Australian homes.</h2>
+            <h2 className="mt-3 font-serif text-3xl sm:text-4xl md:text-5xl text-navy">Loved by hundreds of Australian homes.</h2>
           </div>
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
+          <div className="mt-10 sm:mt-14 grid md:grid-cols-3 gap-5 sm:gap-6">
             {testimonials.map((t, i) => (
-              <figure key={t.name} className="reveal hover-lift relative bg-card rounded-2xl p-8 shadow-soft border border-border/50" style={{ transitionDelay: `${i * 80}ms` }}>
-                <Quote className="absolute top-6 right-6 h-10 w-10 text-teal/20" />
+              <figure key={t.name} className="reveal hover-lift relative bg-card rounded-2xl p-6 sm:p-8 shadow-soft border border-border/50" style={{ transitionDelay: `${i * 80}ms` }}>
+                <Quote className="absolute top-5 right-5 sm:top-6 sm:right-6 h-9 w-9 sm:h-10 sm:w-10 text-teal/20" />
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, k) => <Star key={k} className="h-4 w-4 fill-teal text-teal" />)}
                 </div>
-                <blockquote className="mt-4 text-navy text-lg leading-relaxed">"{t.quote}"</blockquote>
-                <figcaption className="mt-6">
+                <blockquote className="mt-4 text-navy text-base sm:text-lg leading-relaxed">"{t.quote}"</blockquote>
+                <figcaption className="mt-5 sm:mt-6">
                   <p className="font-semibold text-navy">{t.name}</p>
                   <p className="text-sm text-muted-foreground">{t.role}</p>
                 </figcaption>
@@ -234,22 +234,22 @@ function Index() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="relative py-28 bg-navy-deep text-white overflow-hidden">
+      <section id="contact" className="relative py-20 sm:py-28 bg-navy-deep text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-mesh opacity-50" />
-        <div className="relative mx-auto max-w-6xl px-6 grid lg:grid-cols-2 gap-16">
+        <div className="relative mx-auto max-w-6xl px-5 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-16">
           <div className="reveal">
             <span className="text-xs font-semibold tracking-widest uppercase text-teal">Get in touch</span>
-            <h2 className="mt-3 font-serif text-4xl md:text-6xl leading-tight">Ready for a Cleaner Space?</h2>
-            <p className="mt-5 text-white/70 max-w-md">Tell us about your space and we'll come back within the hour with a transparent quote. No call centres, no upsells.</p>
-            <a href="tel:18002532628" className="mt-8 inline-flex items-center gap-3 text-teal hover:text-teal-glow transition-colors">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-teal/15">
+            <h2 className="mt-3 font-serif text-3xl sm:text-4xl md:text-6xl leading-tight">Ready for a Cleaner Space?</h2>
+            <p className="mt-4 sm:mt-5 text-sm sm:text-base text-white/70 max-w-md">Tell us about your space and we'll come back within the hour with a transparent quote. No call centres, no upsells.</p>
+            <a href="tel:18002532628" className="mt-7 sm:mt-8 inline-flex items-center gap-3 text-teal hover:text-teal-glow transition-colors">
+              <span className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-teal/15">
                 <Phone className="h-5 w-5" />
               </span>
-              <span className="font-serif text-3xl md:text-4xl">1800-CLEAN-AU</span>
+              <span className="font-serif text-2xl sm:text-3xl md:text-4xl">1800-CLEAN-AU</span>
             </a>
           </div>
 
-          <form onSubmit={(e) => { e.preventDefault(); alert("Thanks! We'll be in touch within the hour."); }} className="reveal space-y-4 bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-8">
+          <form onSubmit={(e) => { e.preventDefault(); alert("Thanks! We'll be in touch within the hour."); }} className="reveal space-y-4 bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-6 sm:p-8">
             <div>
               <label className="text-xs uppercase tracking-widest text-white/60">Name</label>
               <input required type="text" className="mt-1 w-full bg-transparent border-b border-white/20 py-3 focus:outline-none focus:border-teal text-white placeholder:text-white/40" placeholder="Jane Doe" />
