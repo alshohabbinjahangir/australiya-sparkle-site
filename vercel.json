@@ -1,11 +1,21 @@
 {
+  "version": 2,
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
-  "framework": "other",
   "public": "dist/client",
-  "functions": {
-    "dist/server/server.js": {
-      "runtime": "nodejs20.x"
+  "builds": [
+    {
+      "src": "api/[[...slug]].js",
+      "use": "@vercel/node"
     }
-  }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/[[...slug]].js"
+    }
+  ]
 }
