@@ -1,11 +1,12 @@
 {
   "version": 2,
   "buildCommand": "npm run build && cp -r dist/server api/server-dist",
-  "functions": {
-    "api/index.js": {
-      "runtime": "nodejs"
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
     }
-  },
+  ],
   "routes": [
     {
       "src": "/assets/(.*)",
