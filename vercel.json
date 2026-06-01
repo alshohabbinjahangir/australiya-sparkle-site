@@ -1,8 +1,7 @@
 {
   "version": 2,
   "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "public": "dist/client",
+  "outputDirectory": "dist/client",
   "builds": [
     {
       "src": "api/[[...slug]].js",
