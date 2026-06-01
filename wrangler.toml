@@ -1,0 +1,11 @@
+name = "australiya-sparkle-site"
+type = "javascript"
+main = "dist/server.js"
+compatibility_date = "2024-12-19"
+
+[env.production]
+name = "australiya-sparkle-site"
+
+[[routes]]
+pattern = "*/*"
+zone_name = "example.com"
